@@ -15,6 +15,21 @@ public class CatRunner {
         cats.add(cat3);
         System.out.println(cats);
         // YOU WILL WRITE MORE CODE HERE
-        Cat cat4 = new Cat("garfield");
+        Cat cat4 = new Cat("Garfield");
+        Cat withNewCat = cats.set(2,cat4);
+        System.out.println(cats);
+        System.out.println(withNewCat);
+        cat4.setName(cat4.getName()+" Meow");
+        System.out.println(cat4);
+        System.out.println(cats);
+
+        for(int i = 0; i< cats.size(); i++){
+            String capitalizedName = cats.get(i).getName().toUpperCase();
+            cats.get(i).setName(capitalizedName);
+        }
+        System.out.println(cats);
+
+        cats.add(new Cat("SAM"));
+        System.out.println(cats);
     }
 }
